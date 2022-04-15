@@ -37,7 +37,29 @@ const findByIdCatService = (idParam) => {
   return thundercats.find((cat) => cat.id === idParam);
 };
 
+const createCatsService = (newCat) => {
+  const newId = thundercats.length + 1;
+  newCat.id = newId;
+  thundercats.push(newCat);
+  return newCat;
+};
+
+const updateCatsService = (id, catEdit) => {
+  catEdit["id"] = id;
+  const catIndex = thundercats.findIndex((cat) => cat.id == id);
+  thundercats[catIndex] = catEdit;
+  return catEdit;
+};
+
+const deleteCatsService = (id) => {
+  const catIndex = thundercats.findIndex((cat) => cat.id == id);
+  return thundercats.splice(catIndex, 1);
+};
+
 module.exports = {
   findAllCatsService,
   findByIdCatService,
+  createCatsService,
+  updateCatsService,
+  deleteCatsService,
 };
