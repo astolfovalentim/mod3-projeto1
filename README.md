@@ -16,7 +16,7 @@ Os critérios de avaliação são:
   - [PUT] Edição de personagens por ID (0,8 pontos);
   - [DELETE] Exclusão de personagens por ID (0,8 pontos).
 
-Requisitos do projeto (somando 6 pontos):
+- Requisitos do projeto (somando 6 pontos):
 
 - Lista em memória (2 pontos);
 - CORS - Liberado (2 pontos);
